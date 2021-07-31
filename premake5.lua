@@ -17,6 +17,10 @@ project "box2d"
         "src/",
         "include"
     }
+
+    configuration "target-emscripten"
+        buildoptions("-fPIC");
+        linkoptions("-fPIC");
     
     filter "system:windows"
         systemversion "latest"
